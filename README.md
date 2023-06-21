@@ -1,7 +1,7 @@
 # [ShadowTLS v3](https://github.com/ihciah/shadow-tls/tree/master)
 - **Install dependencies**
 ```
-apt update && apt -y install wget git libc6-dev build-essential zlib1g-dev libssl-dev libevent-dev mingw-w64
+apt update && apt -y install wget libc6-dev build-essential zlib1g-dev libssl-dev libevent-dev mingw-w64
 ```
 - **Install go**
 ```
