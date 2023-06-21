@@ -1,0 +1,41 @@
+{
+  "inbounds": [
+    {
+      "type": "shadowtls",
+      "tag": "st-in",
+      "listen": "::",
+      "listen_port": 443, //监听端口
+      "version": 3, //协议版本为ShadowTLS v3
+      "users": [
+        {
+          "name": "xiao0123",    //用户名
+          "password": "XTVsAyFnREiRn5hgrjUAu8a9dSsicFKYIJM+K8+Iv8g=" //ShadowTLS 密码，执行sing-box generate rand --base64 32生成
+        }
+      ],
+      "handshake": {
+        "server": "www.apple.com", //握手服务器地址
+        "server_port": 443
+      },
+      "strict_mode": true, //开启ShadowTLS 严格模式
+      "detour": "ss-in"   //连接转发到shadowsocks节点
+    },
+    {
+      "type": "shadowsocks",    //shadowsocks节点配置
+      "tag": "ss-in",
+      "listen": "127.0.0.1",
+      "network": "tcp",
+      "method": "2022-blake3-chacha20-poly1305",    //Shadowsocks加密方式
+      "password": "NZew3ZrmZjxullszmAKtfu+pZh0F1dxnIPcwlaStjyI=" //Shadowsocks密码，执行sing-box generate rand --base64 32生成
+    }
+  ], 
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}
