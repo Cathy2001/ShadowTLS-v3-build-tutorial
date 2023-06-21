@@ -13,7 +13,7 @@ go install -v -tags with_dhcp with_wireguard with_shadowsocksr with_ech with_utl
 ```
 - **Download sing-box.service and config.json**
 ```
-wget -P /etc/systemd/system https://raw.githubusercontent.com/TinrLin/NaiveProxy-installation/main/caddy.service && mkdir /usr/local/etc/sing-box && wget -O /usr/local/etc/caddy.json https://raw.githubusercontent.com/TinrLin/NaiveProxy-installation/main/caddy_443.json
+wget -P /etc/systemd/system https://raw.githubusercontent.com/TinrLin/NaiveProxy-installation/main/caddy.service && mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://raw.githubusercontent.com/TinrLin/ShadowTLS-v3-build-tutorial/main/config.json
 ```
 - **Test if it works**
 ```
