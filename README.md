@@ -9,7 +9,7 @@ wget -c https://go.dev/dl/go1.20.5.linux-amd64.tar.gz -O - | tar -xz -C /usr/loc
 ```
 - **Install sing-box**
 ```
-go install -v -tags with_dhcp,with_wireguard,with_shadowsocksr,with_ech,with_utls,with_gvisor,with_clash_api,with_lwip,github.com/sagernet/sing-box/cmd/sing-box@latest && mv ~/go/bin/sing-box /usr/local/bin/
+go install -v -tags with_dhcp,with_wireguard,with_shadowsocksr,with_ech,with_utls,with_gvisor,with_clash_api,with_lwip,github.com/sagernet/sing-box/cmd/sing-box@latest
 ```
 - **Download sing-box.service and config.json**
 ```
